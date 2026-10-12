@@ -245,7 +245,16 @@ title: "Validation pipeline"
 layout: cover
 class: section-title-slide
 section: true
-title: "Domain Expertise"
+title: "Lesson 1: Domain Expertise Matters"
+---
+
+<SectionTitleSlide />
+
+---
+layout: cover
+class: section-title-slide
+subsection: true
+title: "1.1. Goal and Environment Is All You Need"
 ---
 
 <SectionTitleSlide />
@@ -276,6 +285,15 @@ claim that every possible impact or regression has been eliminated.
 
 ---
 layout: cover
+class: section-title-slide
+subsection: true
+title: "1.2. Eval Driven Development"
+---
+
+<SectionTitleSlide />
+
+---
+layout: cover
 class: openssl-slide
 title: "Eval-driven development"
 clicks: 2
@@ -303,6 +321,15 @@ Source: Dimi-BSides.pdf, pages 26–28. The native table transcribes fftw3/fftw3
 layout: cover
 class: section-title-slide
 section: true
+title: "Lesson 2: Ecosystem is Complex"
+---
+
+<SectionTitleSlide />
+
+---
+layout: cover
+class: section-title-slide
+subsection: true
 title: "Negative Day Vulnerabilities"
 ---
 
@@ -479,7 +506,16 @@ frontier on cost; Astra is off it on both cost and recall.
 layout: cover
 class: section-title-slide
 section: true
-title: "Attacks on Your Agents"
+title: "Lesson 3: Protect Your Agents"
+---
+
+<SectionTitleSlide />
+
+---
+layout: cover
+class: section-title-slide
+subsection: true
+title: "Adversarial AI"
 ---
 
 <SectionTitleSlide />
@@ -566,6 +602,19 @@ clicks: 0
 
 <!--
 Source: Dimi-BSides.pdf, page 39. Reuse only the infrastructure cartoon, without the conference photo. The source PDF labels its attribution as [Source] without an accessible URL. Use this as a metaphor for shared infrastructure and maintainer capacity, not as a prediction or a literal technical dependency map. Where is the cyber-pocalypse? What does more automated discovery mean for the people responsible for these systems?
+-->
+
+---
+layout: cover
+class: openssl-slide
+title: "Jevons paradox"
+clicks: 0
+---
+
+<figure class="bsides-tower"><img src="/jevons-paradox-cars.jpg" alt="Jevons paradox: fuel-efficient cars can encourage more driving and fuel consumption. Illustration by Sketchplanations."></figure>
+
+<!--
+Source: Sketchplanations, https://sketchplanations.com/jevons-paradox . Original illustration retained with its embedded attribution. This car analogy introduces the following slide's possible increase in demand for validation.
 -->
 
 ---

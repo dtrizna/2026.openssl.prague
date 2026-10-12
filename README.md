@@ -11,21 +11,22 @@ and closing sequence.
 - Slides 1–3: title, original UNPROMPTED whoami, and automatic section agenda.
 - Slide 4: Protecting Open Source Ecosystem. Slides 5–13 cover discovery,
   evidence, and the validation pipeline.
-- Slide 14: Domain Expertise. Slides 15–18 cover proof of concept, remediation,
-  and evaluation.
+- Slide 14: Lesson 1: Domain Expertise Matters.
+- Slide 15: 1.1. Goal and Environment Is All You Need; slides 16–17 cover proof of concept and remediation.
+- Slide 18: 1.2. Eval Driven Development; slides 19–20 cover the evaluation workflow and evidence.
 - Slides 10–11: BSides jagged-capability illustration and Minesweeper analogy.
-- Slides 17–18: editable fuzzing/evaluation diagram, two original benchmark
-  examples, and the original harness-viewer screenshot on click.
-- Slide 19: Negative Day Vulnerabilities. Slides 20–27 correspond to
-  UNPROMPTED slides 6, 7, 8, 10, 11, 12, 17, 19.
-- Slide 28: Attacks on Your Agents. Slides 29–32 correspond to UNPROMPTED
-  slides 31–34.
-- Slides 33–34: BSides infrastructure tower and the discovery/validation
-  pipeline revisited with a possible increase in validation demand.
-- Slide 35: original UNPROMPTED thank-you and QR slide.
+- Slide 21: Lesson 2: Ecosystem is Complex.
+- Slide 22: Negative Day Vulnerabilities; slides 23–30 correspond to UNPROMPTED slides 6, 7, 8, 10, 11, 12, 17, 19.
+- Slide 31: Lesson 3: Protect Your Agents.
+- Slide 32: Adversarial AI; slides 33–36 correspond to UNPROMPTED slides 31–34.
+- Slide 37: BSides infrastructure tower.
+- Slide 38: Jevons paradox car illustration by [Sketchplanations](https://sketchplanations.com/jevons-paradox).
+- Slide 39: discovery/validation pipeline revisited with a possible increase in validation demand.
+- Slide 40: original UNPROMPTED thank-you and QR slide.
 
-The agenda automatically reads the title of every slide marked `section: true`.
-The reaction GIF reveals below LoL on slide 27.
+The agenda groups slides marked `subsection: true` under the preceding `section: true` slide.
+Subsection dividers and their indented agenda entries use gray text.
+The reaction GIF reveals below LoL on slide 30.
 
 Screenshot groups reveal one image per click, with earlier images remaining.
 Slide 12 starts with the complete discovery half, then reveals the two Anthropic

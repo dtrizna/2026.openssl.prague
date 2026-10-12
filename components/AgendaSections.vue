@@ -3,32 +3,31 @@ import { useNav } from '@slidev/client'
 import { computed } from 'vue'
 
 const { slides } = useNav()
-
-const sectionTitles = computed(() =>
-  slides.value
-    .map(({ meta }) => meta.slide.frontmatter)
-    .filter(frontmatter => frontmatter.section === true)
-    .map(frontmatter => String(frontmatter.title)),
-)
+const sections = computed(() => {
+  const groups: { title: string; children: string[] }[] = []
+  for (const { meta } of slides.value) {
+    const frontmatter = meta.slide.frontmatter
+    if (frontmatter.section === true)
+      groups.push({ title: String(frontmatter.title), children: [] })
+    else if (frontmatter.subsection === true && groups.length)
+      groups[groups.length - 1].children.push(String(frontmatter.title))
+  }
+  return groups
+})
 </script>
 
 <template>
   <div class="agenda-list">
-    <h1 v-for="(title, index) in sectionTitles" :key="title">
-      <span>{{ String(index + 1).padStart(2, '0') }}</span>{{ title }}
-    </h1>
+    <div v-for="section in sections" :key="section.title" class="agenda-section">
+      <h2>{{ section.title }}</h2>
+      <p v-for="title in section.children" :key="title">{{ title }}</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.agenda-list {
-  display: grid;
-  margin-top: 32px;
-  grid-template-columns: 1fr;
-  gap: 13px;
-}
-
-.agenda-list h1 {
+.agenda-list { display: grid; margin-top: 26px; gap: 18px; }
+.agenda-section h2 {
   margin: 0;
   color: #343438;
   font-size: 23px;
@@ -36,13 +35,11 @@ const sectionTitles = computed(() =>
   line-height: 1.14;
   letter-spacing: -0.025em;
 }
-
-.agenda-list h1 span {
-  display: inline-block;
-  width: 42px;
-  color: #a1a1a6;
-  font-size: 13px;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0;
+.agenda-section p {
+  margin: 7px 0 0 32px;
+  color: #6e6e73;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 </style>
