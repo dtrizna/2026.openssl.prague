@@ -1,0 +1,16 @@
+{
+  "name": "openssl-conference",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "latest",
+    "roughjs": "^4.6.6",
+    "vue": "^3.5.33"
+  }
+}
