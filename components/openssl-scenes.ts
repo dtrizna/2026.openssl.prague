@@ -74,8 +74,20 @@ const afterPatch: Stage = [
 const scenes = {
   discovery: [[...source, ...discovery]],
   'anthropic-response': [[], [], [], [['Anthropic response', 'gtOht48Vn2OTGkdLzj9MI']]],
-  pipeline: [[...source, ...discovery], validation, expertise],
-  poc: [discoveryAgent, validationAgent, expertGoal],
+  pipeline: [
+    [...source, ...discovery.filter(([name]) => ['Upper outer discovery branch', 'Lower outer discovery branch', 'Discovery volume boundary'].includes(name))],
+    discovery.filter(([name]) => name === 'Candidate vulnerabilities'),
+    discovery.filter(([name]) => name === 'Qwen and GPT-OSS label'),
+    discovery.filter(([name]) => ['Upper inner discovery branch', 'Lower inner discovery branch', 'Mythos label'].includes(name)),
+    validation,
+    expertise.filter(([name]) => ['AI native capabilities', 'Discovery capabilities arrow'].includes(name)),
+    expertise.filter(([name]) => ['Security domain expertise', 'Validation expertise arrow'].includes(name)),
+  ],
+  poc: [
+    [...discoveryAgent, ...validationAgent.filter(([name]) => !['Validation environment frame', 'Environment label'].includes(name))],
+    expertGoal,
+    validationAgent.filter(([name]) => ['Validation environment frame', 'Environment label'].includes(name)),
+  ],
   remediation: [remediationBase, beforePatch, afterPatch],
 } satisfies Record<string, Stage[]>
 

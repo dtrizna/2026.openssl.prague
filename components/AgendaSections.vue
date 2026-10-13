@@ -8,7 +8,7 @@ const sections = computed(() => {
   for (const { meta } of slides.value) {
     const frontmatter = meta.slide.frontmatter
     if (frontmatter.section === true)
-      groups.push({ title: String(frontmatter.title), children: [] })
+      groups.push({ title: String(frontmatter.title), children: frontmatter.subtitle ? [String(frontmatter.subtitle)] : [] })
     else if (frontmatter.subsection === true && groups.length)
       groups[groups.length - 1].children.push(String(frontmatter.title))
   }

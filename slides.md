@@ -67,9 +67,115 @@ title: "Protecting Open Source Ecosystem"
 <SectionTitleSlide />
 
 ---
+layout: "cover"
+class: "openssl-slide"
+clicks: 2
+title: "Before the Mythos scare"
+---
+
+<EvidenceScreens kind="mythos" />
+
+---
+layout: "cover"
+class: "openssl-slide"
+clicks: 3
+title: "GLM and zero-days"
+---
+
+<EvidenceScreens kind="glm" />
+
+---
+layout: cover
+class: openssl-slide
+clicks: 8
+title: "Anthropic: validation capacity"
+---
+
+<EvidenceScreens kind="candidates" />
+
+<!--
+Screens at clicks 1–2. Initial paraphrase at click 3, report text and underline at 4, report example at 5.
+“They got tired” at 6; human-validation bottleneck underline at 7; final two lines at 8.
+The orange text is the speaker's paraphrase, not a verbatim quotation.
+-->
+
+---
+layout: "cover"
+class: "aisle-wall-of-fame-slide"
+clicks: 1
+sourceSlide: 15
+---
+
+<div class="aisle-wall-of-fame-frame">
+  <img
+    class="aisle-wall-of-fame-image"
+    :src="'/cvefactory_latest.png'"
+    alt="Aisle Wall of Fame showing coordinated vulnerability disclosures"
+  />
+  <div class="aisle-wall-of-fame-marks" aria-hidden="true">
+    <span
+      class="aisle-wall-of-fame-mark aisle-discovery-claim-mark"
+      data-hotspot-name="CVEs discovered by Aisle"
+      v-mark="{ at: 1, type: 'underline', color: '#ff3b30', padding: 2, strokeWidth: 3.5 }"
+    />
+    <span
+      class="aisle-wall-of-fame-mark aisle-discovered-count-mark"
+      data-hotspot-name="495 discovered CVEs"
+      v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 10, strokeWidth: 3 }"
+    />
+    <span
+      class="aisle-wall-of-fame-mark aisle-first-month-mark"
+      data-hotspot-name="Sep 25 first bar"
+      v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 5, strokeWidth: 3 }"
+    />
+  </div>
+</div>
+
+---
+layout: "cover"
+class: "openssl-slide"
+clicks: 6
+title: "Validation pipeline"
+---
+
+<div class="diagram-stage"><OpenSSLDiagram scene="pipeline" /></div>
+
+---
+layout: cover
+class: openssl-slide
+title: "Uneven capabilities"
+clicks: 0
+---
+
+<JaggedCapabilities />
+
+<!--
+Source: Dimi-BSides.pdf, page 33. Original illustration attributed in that deck to https://newsletter.danielpaleka.com/p/even-superhuman-ai-forecasters-are . This is a conceptual illustration, not a measured benchmark. Only the jagged-capability panel is shown; the future/AGI progression is omitted.
+-->
+
+---
+layout: "cover"
+class: "openssl-slide"
+clicks: 2
+title: "Small open models can discover vulnerabilities"
+---
+
+<EvidenceScreens kind="small-models" />
+
+---
+layout: cover
+class: section-title-slide
+section: true
+title: "Lesson 1: Eval Driven Development"
+---
+
+<SectionTitleSlide />
+
+---
 layout: cover
 class: ai-native-flow-slide
 title: Code in, vulnerabilities out
+clicks: 3
 ---
 
 <div class="ai-native-flow-content">
@@ -103,6 +209,7 @@ void copy(char *input) {
 
 <div class="ai-native-harness">
 <NegativeDayTimeline scene="agent-harness" />
+<div class="harness-versions"><div v-click="1">v1.1</div><div v-click="2">v1.2</div><div v-click="3" class="harness-plea">"please, please find me vulnerability"</div></div>
 </div>
 
 <div class="ai-native-flow-arrow" aria-hidden="true">→</div>
@@ -138,123 +245,20 @@ WRITE of size 17
 </div>
 
 ---
-layout: "cover"
-class: "aisle-wall-of-fame-slide"
-clicks: 1
-sourceSlide: 15
----
-
-<div class="aisle-wall-of-fame-frame">
-  <img
-    class="aisle-wall-of-fame-image"
-    :src="'/aisle-wall-of-fame-a9.png'"
-    alt="Aisle Wall of Fame showing coordinated vulnerability disclosures"
-  />
-  <div class="aisle-wall-of-fame-marks" aria-hidden="true">
-    <span
-      class="aisle-wall-of-fame-mark aisle-discovery-claim-mark"
-      data-hotspot-name="CVEs discovered by Aisle"
-      v-mark="{ at: 1, type: 'underline', color: '#ff3b30', padding: 2, strokeWidth: 3.5 }"
-    />
-    <span
-      class="aisle-wall-of-fame-mark aisle-discovered-count-mark"
-      data-hotspot-name="378 discovered CVEs"
-      v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 10, strokeWidth: 3 }"
-    />
-  </div>
-</div>
-
----
-layout: "cover"
-class: "openssl-slide"
-clicks: 2
-title: "Before the Mythos scare"
----
-
-<EvidenceScreens kind="mythos" />
-
----
-layout: "cover"
-class: "openssl-slide"
-clicks: 3
-title: "GLM and zero-days"
----
-
-<EvidenceScreens kind="glm" />
-
----
-layout: "cover"
-class: "openssl-slide"
-clicks: 2
-title: "Small open models can discover vulnerabilities"
----
-
-<EvidenceScreens kind="small-models" />
-
----
 layout: cover
 class: openssl-slide
-title: "Uneven capabilities"
-clicks: 0
+title: "Benchmark (aka Eval)"
+clicks: 4
 ---
 
-<div class="bsides-jagged"><svg viewBox="680 280 400 455" role="img" aria-label="AI has a jagged frontier: some tasks exceed human performance, others remain outside its capabilities"><defs><clipPath id="jagged-panel"><rect x="680" y="280" width="390" height="125" /><path d="M700 410 H1005 V604 L1038 635 L1057 658 L1063 679 L1048 704 L1000 728 H700 Z" /></clipPath></defs><image href="/bsides/Image278.jpg" width="1977" height="1104" clip-path="url(#jagged-panel)" /></svg></div>
-
-<!--
-Source: Dimi-BSides.pdf, page 33. Original illustration attributed in that deck to https://newsletter.danielpaleka.com/p/even-superhuman-ai-forecasters-are . This is a conceptual illustration, not a measured benchmark. Only the jagged-capability panel is shown; the future/AGI progression is omitted.
--->
-
----
-layout: cover
-class: openssl-slide
-title: "Sorting through plausible reports"
-clicks: 0
----
-
-<figure class="bsides-single"><img src="/bsides/Image116.jpg" alt="Minesweeper on a Windows desktop"></figure>
-
-<!--
-Source: Dimi-BSides.pdf, page 9, and the supplied BSides transcript. Adapt the Minesweeper analogy from filtering low-value reading to the work of separating plausible vulnerability hypotheses from actionable findings. This is an analogy, not evidence that reports are invalid.
--->
----
-layout: "cover"
-class: "openssl-slide"
-clicks: 3
-title: "Candidate vulnerabilities"
----
-
-<div class="diagram-stage"><OpenSSLDiagram scene="discovery" /></div>
-<EvidenceScreens kind="candidates" />
-
-<!--
-The supplied excerpt says over 29,000 candidate vulnerabilities and approximately
-6,000 manually reviewed and triaged. It does not say all 6,000 were validated.
-The orange Excalidraw text is the speaker’s paraphrase, not a verbatim quotation.
--->
-
----
-layout: "cover"
-class: "openssl-slide"
-clicks: 2
-title: "Validation pipeline"
----
-
-<div class="diagram-stage"><OpenSSLDiagram scene="pipeline" /></div>
+<HarnessBenchmark />
 
 ---
 layout: cover
 class: section-title-slide
 section: true
-title: "Lesson 1: Domain Expertise Matters"
----
-
-<SectionTitleSlide />
-
----
-layout: cover
-class: section-title-slide
-subsection: true
-title: "1.1. Goal and Environment Is All You Need"
+title: "Lesson 2: Deterministic Gate"
+subtitle: "Goal and Environment Is All You Need"
 ---
 
 <SectionTitleSlide />
@@ -262,11 +266,18 @@ title: "1.1. Goal and Environment Is All You Need"
 ---
 layout: "cover"
 class: "openssl-slide"
-clicks: 2
+clicks: 3
 title: "Validation with a proof of concept"
 ---
 
 <div class="diagram-stage diagram-stage--poc"><OpenSSLDiagram scene="poc" /></div>
+
+<svg v-click="3" class="goal-control-callout" viewBox="0 0 980 552" aria-label="Out of AI Control, pointing to the expert-guided goal">
+  <defs><marker id="goal-control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#6e6e73" stroke-width="1.5" /></marker></defs>
+  <path d="M780 455 Q816 438 816 397" fill="none" stroke="#6e6e73" stroke-width="2" marker-end="url(#goal-control-arrow)" />
+  <text x="740" y="490" text-anchor="middle" fill="#6e6e73" font-family="inherit">Out of AI Control</text>
+</svg>
+
 
 ---
 layout: "cover"
@@ -286,42 +297,8 @@ claim that every possible impact or regression has been eliminated.
 ---
 layout: cover
 class: section-title-slide
-subsection: true
-title: "1.2. Eval Driven Development"
----
-
-<SectionTitleSlide />
-
----
-layout: cover
-class: openssl-slide
-title: "Eval-driven development"
-clicks: 2
----
-
-<EvalDevelopment />
-
-<!--
-Source: Dimi-BSides.pdf, pages 24–25, and the supplied BSides transcript. Start with the fuzzing workflow; reveal the benchmark boundary, then the OSS-Fuzz baseline. This evaluates the agent/harness system across targets, distinct from validating an individual finding. Coverage is an intermediate measurement, not proof of vulnerability discovery. Comparing against a human harness establishes a baseline, not a universal ranking.
--->
-
----
-layout: cover
-class: openssl-slide
-title: "Where does it improve? Where does it fail?"
-clicks: 1
----
-
-<EvalEvidence />
-
-<!--
-Source: Dimi-BSides.pdf, pages 26–28. The native table transcribes fftw3/fftw3_fuzzer and hwloc/hwloc_fuzzer from the source benchmark image. Reported percentage-point changes use the original report values (+26.6 pp and -5.2 pp); displayed rounded percentages may not subtract to exactly those changes. These are two selected examples, not an aggregate success rate. On click, show the original harness benchmark viewer: use domain knowledge to investigate failures, not just prompt changes. The viewer screenshot illustrates the investigation workflow; it is not claimed to show either of these selected target rows.
--->
----
-layout: cover
-class: section-title-slide
 section: true
-title: "Lesson 2: Ecosystem is Complex"
+title: "Lesson 3: Ecosystem is Complex"
 ---
 
 <SectionTitleSlide />
@@ -506,7 +483,7 @@ frontier on cost; Astra is off it on both cost and recall.
 layout: cover
 class: section-title-slide
 section: true
-title: "Lesson 3: Protect Your Agents"
+title: "Lesson 4: Protect Your Agents"
 ---
 
 <SectionTitleSlide />
