@@ -1,0 +1,24 @@
+model,provider,status,runner_status,host_sleep_affected,recovered_from_checkpoint,completion_round,analysis_retry_count,expanded_output_retry_count,capped_reasoning_fallback_count,protocol_variant,additional_estimated_usd,detected,total_cves,detection_rate,findings,analyzer_cost_estimate_usd,judge_cost_estimate_usd,analyzer_sdk_cache_aware_estimate_usd,judge_sdk_cache_aware_estimate_usd,analyzer_priced_requests,analyzer_successful_requests,analyzer_minutes,input_tokens,output_tokens,request_errors,response_limit_hits,refusal_responses,warnings
+gpt-5,OpenAI,complete,complete,False,True,True,0,0,0,original,8.994333249999995,10,22,0.45454545454545453,42,218.0882225,0.414415,80.9941744999999,0.411823,4671,4671,,154441274,2503663,1,0,0,0
+gpt-5.1,OpenAI,complete,complete,False,True,False,0,0,0,original,13.885987999999998,7,22,0.3181818181818182,24,188.92880875,0.10604375,68.25911275000006,0.10604374999999999,2655,2655,,133928255,2151849,8,0,0,0
+gpt-5.2,OpenAI,complete,complete,False,True,False,0,0,0,original,109.39457864999976,10,22,0.45454545454545453,64,621.4491535,0.25329125,185.34319509999924,0.25084325,7081,7081,,331328946,2973107,1,0,0,9
+gpt-5.4-mini,OpenAI,complete,complete,False,False,False,0,0,0,original,,9,22,0.4090909090909091,37,75.6175395,0.17129,25.68101789999999,0.17129000000000003,2366,2366,32.76017252083402,91912876,1485085,0,0,0,4
+gpt-5.4,OpenAI,complete,complete,False,True,False,0,0,0,original,134.44298600000008,14,22,0.6363636363636364,93,778.055765,0.29671,224.22283699999986,0.29671000000000003,5473,5473,,292457984,3127387,6,0,0,1
+gpt-5.5,OpenAI,complete,complete,False,True,False,0,0,0,original,60.28131999999998,20,22,0.9090909090909091,90,984.4945,0.28933,266.27952400000044,0.28933,4445,4445,,188232914,1444331,0,0,0,4
+gpt-5.6-luna,OpenAI,complete,complete,False,False,False,0,0,0,original,,8,22,0.36363636363636365,48,17.3626668,0.21173125,7.629607180000009,0.21173124999999998,2321,2321,28.839066546515095,82212324,766835,0,0,0,2
+gpt-5.6-terra,OpenAI,complete,complete,False,False,False,0,0,0,original,,10,22,0.45454545454545453,54,187.522934,0.2205025,81.698702,0.22050250000000002,1839,1839,28.83306404929996,88981573,796649,0,0,0,20
+gpt-5.6-sol,OpenAI,complete,complete,False,True,True,0,0,0,original,248.6760757500001,18,22,0.8181818181818182,108,682.609252,0.30435625,276.74687125,0.30435625000000005,2850,2850,,164992708,1131921,1,0,0,0
+gpt-6-astra,OpenAI,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-opus-4-5-20251101,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-opus-4-6,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-opus-4-7,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-opus-4-8,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-haiku-4-5-20251001,Anthropic,complete,complete,False,False,True,1,0,0,original,44.49423105,8,22,0.36363636363636365,117,238.725347,0.99504875,84.97081554999998,0.9950487499999998,6342,6342,30.748734072917916,228673377,2010394,0,0,0,0
+claude-sonnet-5,Anthropic,complete,complete,False,False,False,0,0,0,original,,4,22,0.18181818181818182,5,159.007702,0.051705,109.96385940000002,0.051705,1115,1115,25.635073959033857,75872761,726218,0,0,0,0
+claude-opus-5,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-fable-5,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+claude-fable-5-1,Anthropic,omitted,not_run,False,False,False,0,0,0,original,,,22,,,,,,,0,0,,,,,0,0,0
+glm-5.3,OSS / Modal,complete,complete,False,False,True,0,0,0,glm-low,51.8708484000001,13,22,0.5909090909090909,53,74.07152479999999,0.23466,,0.23350799999999997,0,1679,24.122787811116236,43025546,3144491,15,92,0,0
+kimi-k3,OSS / Modal,complete,complete,False,False,False,0,0,0,original,,12,22,0.5454545454545454,36,83.798547,0.2072975,47.41516140000007,0.20729749999999997,1000,1000,24.61789180346726,25487749,489020,0,0,0,0
+qwen3.8-max,OSS / Modal,running,running,False,True,True,12,2,0,extended-timeout,,,22,,,334.4203399999999,0.0,,,0,3089,,155172523,4012549,32,15,0,0
+deepseek-v4.1-flash,OSS / Modal,complete,complete,False,False,True,23,0,23,eigen-native,27.05940180000001,17,22,0.7727272727272727,39,26.8760103,0.1846875,,0.18339149999999999,0,1204,75.1532760347162,60456401,7282575,0,24,0,0

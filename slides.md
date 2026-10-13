@@ -255,6 +255,86 @@ clicks: 4
 
 ---
 layout: cover
+class: openssl-slide openssl-eval-setup
+title: "Building the OpenSSL benchmark"
+clicks: 0
+---
+
+<h1 class="eval-setup-title">Can we rediscover known OpenSSL vulnerabilities?</h1>
+<div class="eval-setup-story">
+  <div><span class="eval-step">01</span><h2>22 known CVEs</h2><p>Published CVEs + their fixes.<br>Reference answers for the judge.</p></div>
+  <div><span class="eval-step">02</span><h2>Freeze the source</h2><p>One OpenSSL checkout.<br>Scope the relevant files and context.</p></div>
+  <div><span class="eval-step">03</span><h2>Scan, then match</h2><p>Four passes per model.<br>LLM judge.</p></div>
+</div>
+<div class="eval-json-card">
+<div class="eval-json-heading">openssl_v2.json <span>one target · excerpt</span></div>
+
+```json
+{
+  "scan_commit": "3206bb708246a97b281133009a419fb7421971d9",
+  "detections": [{
+    "cve_id": "CVE-2025-9230",
+    "commit_after_fix":
+      "9c462be2cea54ebfc62953224220b56f8ba22a0c",
+    "expected_vulnerability": {
+      "file_path": "crypto/cms/cms_pwri.c",
+      "cwe": "CWE-125",
+      "code_snippet":
+        "memcpy(out, tmp + 4, *outlen);"
+    }
+  }]
+}
+```
+
+</div>
+<p class="eval-setup-takeaway">The analyzer sees source code. The judge sees the reference answers.</p>
+
+<!--
+Sources: analyzer_bench/README.md, data/openssl_v2.json, openssl_ablation/README.md and results/report.html (snapshot 2026-10-13).
+The JSON is a deliberately reduced example: fields and values are taken from the first target, and code_snippet is shortened to one original source line. It is not the full runnable dataset.
+22 known OpenSSL CVEs are paired with before/after-fix commits and expected vulnerability records. No specific advisory ingestion process is asserted: these files do not establish one.
+One scan at commit 3206bb708246a97b281133009a419fb7421971d9, with 68 include globs and CHANGES.md excluded. Initial scope can be filtered or expanded by the production context workflow.
+Four passes, same candidate in all analyzer roles, fixed GPT-5 judge using filename matching and semantic matching. Ground-truth descriptions are supplied to the judge, not the analyzer.
+The shared scan commit and presence of target files do not independently establish that every target is present and detectable. Detection = matched known targets / 22; not general recall or precision. One trial per model; settings and retry policies vary as disclosed in the report.
+-->
+
+---
+layout: cover
+class: openssl-slide
+title: "OpenSSL: GPT generations and model tiers"
+clicks: 0
+---
+
+<img class="openssl-eval-plot" src="/openssl-benchmark/model-progression.svg" alt="Two line charts showing known-CVE detection by GPT generation and across GPT-5.6 Luna, Terra and Sol">
+
+<!--
+Source: the same public/openssl-benchmark/results.csv snapshot as the following scatterplot.
+Generation series uses GPT-5, 5.1, 5.2, 5.4, 5.5, and 5.6 Sol: 10, 7, 10, 14, 20, 18 of 22.
+No GPT-5.3 result is supplied; GPT-5.4 mini is excluded from the main-generation comparison.
+GPT-5.6 tier series: Luna 8/22, Terra 10/22, Sol 18/22. No parameter counts are inferred.
+Lines connect measured categorical model results, not interpolated measurements. One trial per model; settings and retry histories differ, so this is descriptive rather than a controlled causal claim about generation or size.
+-->
+
+---
+layout: cover
+class: openssl-slide
+title: "OpenSSL: detection versus evaluation spend"
+clicks: 2
+---
+
+<img class="openssl-eval-plot" src="/openssl-benchmark/performance-cost.svg" alt="OpenSSL benchmark scatterplot: known-CVE detection against recorded evaluation spend, with the observed Pareto frontier">
+
+<span v-click="1" class="plot-applause plot-applause-deepseek" aria-label="Applause for DeepSeek">👏</span>
+<span v-click="2" class="plot-applause plot-applause-gpt" aria-label="Applause for GPT-5.5">👏</span>
+
+<!--
+Replotted from the supplied report's full_table.csv, snapshot 2026-10-13, preserved in public/openssl-benchmark/results.csv. Same completed-run selection, uncached analyzer-cost field and Pareto calculation as performance_vs_cost.png. 14 complete models; Qwen still running and excluded.
+Observed Pareto frontier: GPT-5.6 Luna → DeepSeek V4.1 Flash → GPT-5.6 Sol → GPT-5.5.
+Costs include inherited failed, interrupted, repeated and superseded work. They are recorded evaluation spend, not clean fresh-scan prices. Historical uncached token-price comparator; judge excluded; Modal GPU billing unmeasured. Different provider settings, retry policies and completion histories limit causal model comparisons. Detection is known targets found / 22, not precision or general recall; no repeated-run uncertainty estimate.
+-->
+
+---
+layout: cover
 class: section-title-slide
 section: true
 title: "Lesson 2: Deterministic Gate"
