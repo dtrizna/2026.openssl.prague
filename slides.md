@@ -668,6 +668,40 @@ the next click.
 
 ---
 layout: cover
+class: section-title-slide
+section: true
+title: "Conclusions"
+clicks: 0
+---
+
+<SectionTitleSlide />
+
+---
+layout: cover
+class: openssl-slide
+title: "Conclusions: takeaways"
+clicks: 8
+---
+
+<div class="conclusion-takeaways">
+  <ul class="takeaway-group">
+    <li v-click="1" class="takeaway-main">AI is incredibly amazing</li>
+    <li v-click="2" class="takeaway-sub">but it makes occasional naive mistakes</li>
+  </ul>
+  <ul class="takeaway-group">
+    <li v-click="3" class="takeaway-main">domain expertise matters</li>
+    <li v-click="4" class="takeaway-sub">measure expected behavior of AI workflows through evals</li>
+    <li v-click="5" class="takeaway-sub">define custom tools and environment to succeed</li>
+    <li v-click="6" class="takeaway-sub">navigate complex multi-team collaboration</li>
+  </ul>
+  <ul class="takeaway-group">
+    <li v-click="7" class="takeaway-main">AI is new attack vector</li>
+    <li v-click="8" class="takeaway-sub">protecting agents is not optional</li>
+  </ul>
+</div>
+
+---
+layout: cover
 class: openssl-slide
 title: "Where is the cyber-pocalypse?"
 clicks: 0

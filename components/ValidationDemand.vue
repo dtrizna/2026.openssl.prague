@@ -17,7 +17,7 @@ const { $clicks } = useSlideContext()
 .finding-stream { position: absolute; left: 37%; top: 62%; width: 80px; display: grid; grid-template-columns: repeat(6, 7px); gap: 6px; transform: rotate(-15deg); }
 .finding-stream span { width: 7px; height: 7px; background: #f08c00; border-radius: 50%; }
 .finding-stream:not(.slidev-vclick-hidden) span { animation: candidate-arrive .4s ease-out var(--delay) both; }
-.closing-takeaway { position: absolute; bottom: 32px; left: 50px; right: 50px; text-align: center; font-size: 25px; letter-spacing: -.025em; line-height: 1.25; margin: 0; }
+.closing-takeaway { position: absolute; bottom: 42px; left: 50px; right: 50px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, sans-serif; font-size: 24px !important; font-weight: 400; color: #6e6e73; letter-spacing: -.025em; line-height: 1.3; margin: 0 !important; }
 .focus-validation :deep([data-scene-name="Upper validation branch"] path),
 .focus-validation :deep([data-scene-name="Lower validation branch"] path) { stroke-width: 5; }
 .focus-validation :deep([data-scene-name="Validation and triage label"] text),

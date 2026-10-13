@@ -618,3 +618,9 @@
 .plot-applause { position: absolute; font-size: 30px; line-height: 1; }
 .plot-applause-deepseek { left: 28%; top: 22%; transform: translateX(-50%); }
 .plot-applause-gpt { left: 92.8%; top: 13%; transform: translateX(-50%); }
+
+.conclusion-takeaways { position: absolute; inset: 66px 65px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.conclusion-takeaways .takeaway-group { margin: 0; padding-left: 27px; list-style-type: disc; }
+.conclusion-takeaways li { padding-left: 5px; line-height: 1.35; }
+.conclusion-takeaways .takeaway-main { color: #1d1d1f; font-size: 29px; font-weight: 500; letter-spacing: -.025em; }
+.conclusion-takeaways .takeaway-sub { color: #6e6e73; font-size: 22px; margin: 9px 0 0 58px !important; list-style-type: circle; }
