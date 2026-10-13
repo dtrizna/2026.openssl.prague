@@ -360,6 +360,24 @@ title: "Validation with a proof of concept"
 
 
 ---
+layout: cover
+class: openssl-slide
+title: "AddressSanitizer: a deterministic gate"
+clicks: 2
+---
+
+<AsanGate />
+
+---
+layout: cover
+class: openssl-slide
+title: "Wireshark: impact and proof of concept"
+clicks: 1
+---
+
+<WiresharkImpact />
+
+---
 layout: "cover"
 class: "openssl-slide"
 clicks: 2
