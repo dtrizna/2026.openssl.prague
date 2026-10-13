@@ -8,43 +8,43 @@ The images and Excalidraw sources are self-contained.
 Content follows the OpenSSL conference outline, with the approved BSides additions
 and closing sequence.
 
-- Slides 1–3: title, original UNPROMPTED whoami, and automatic section agenda.
-- Slide 4: Protecting Open Source Ecosystem. Slides 5–13 cover discovery,
-  evidence, and the validation pipeline.
-- Slide 14: Lesson 1: Domain Expertise Matters.
-- Slide 15: 1.1. Goal and Environment Is All You Need; slides 16–17 cover proof of concept and remediation.
-- Slide 18: 1.2. Eval Driven Development; slides 19–20 cover the evaluation workflow and evidence.
-- Slides 10–11: BSides jagged-capability illustration and Minesweeper analogy.
-- Slide 21: Lesson 2: Ecosystem is Complex.
-- Slide 22: Negative Day Vulnerabilities; slides 23–30 correspond to UNPROMPTED slides 6, 7, 8, 10, 11, 12, 17, 19.
-- Slide 31: Lesson 3: Protect Your Agents.
-- Slide 32: Adversarial AI; slides 33–36 correspond to UNPROMPTED slides 31–34.
-- Slide 37: BSides infrastructure tower.
-- Slide 38: Jevons paradox car illustration by [Sketchplanations](https://sketchplanations.com/jevons-paradox).
-- Slide 39: discovery/validation pipeline revisited with a possible increase in validation demand.
-- Slide 40: original UNPROMPTED thank-you and QR slide.
+- Slides 1–3: title, UNPROMPTED whoami, and automatic section agenda.
+- Slides 4–11: Protecting Open Source Ecosystem, Mythos and Anthropic evidence,
+  CVE factory, validation pipeline, jagged capabilities, and small-model results.
+- Slides 12–17: Lesson 1: Eval Driven Development. Harness iterations, benchmark
+  inputs and outputs, OpenSSL dataset setup, model progression, and cost/performance.
+- Slides 18–22: Lesson 2: Deterministic Gate. Goal and environment, ASan,
+  Wireshark CVEs and PoC video, and remediation.
+- Slides 23–32: Lesson 3: Ecosystem is Complex, with Negative Day Vulnerabilities.
+- Slides 33–38: Lesson 4: Protect Your Agents, with Adversarial AI and defenses.
+- Slides 39–40: Conclusions and staged takeaways.
+- Slide 41: BSides infrastructure tower.
+- Slide 42: Jevons paradox car illustration by [Sketchplanations](https://sketchplanations.com/jevons-paradox).
+- Slide 43: discovery/validation pipeline revisited with increased validation demand.
+- Slide 44: white thank-you slide with QR code.
 
-The agenda groups slides marked `subsection: true` under the preceding `section: true` slide.
-Subsection dividers and their indented agenda entries use gray text.
-The reaction GIF reveals below LoL on slide 30.
+The agenda includes section subtitles and groups slides marked `subsection: true`
+under the preceding `section: true` slide. Subsection entries use gray text.
+Content slides include the OpenSSL Conference footer and slide number.
 
-Screenshot groups reveal one image per click, with earlier images remaining.
-Slide 12 starts with the complete discovery half, then reveals the two Anthropic
-screens on its right and the orange Excalidraw paraphrase beneath them.
-Slide 13 uses the same viewport and position for discovery and reveals validation
-and expertise in place. The source excerpt says approximately 6,000 candidates
-were manually reviewed and triaged; it does not establish that 6,000 were validated.
+Slide 7 stages the Anthropic screenshots and orange speaker paraphrase, including
+report evidence between the triage-firms and tired-reviewers lines. The source
+excerpt says approximately 6,000 candidates were manually reviewed and triaged;
+it does not establish that 6,000 were validated. Slide 9 separately reveals the
+candidate labels, model families, validation, and security domain expertise.
+The reaction GIF reveals below LoL on slide 32.
+
+OpenSSL benchmark data and methodology notes live in `public/openssl-benchmark/`.
 
 ## BSides sources
 
 Assets in `public/bsides` were extracted from `Dimi-BSides.pdf` without
 rasterizing the whole slides. Original source: `/Users/dtrizna/Talks/Aisle_Times/`.
-Speaker notes retain source page numbers and interpretation limits. The evaluation
-diagram and benchmark table are editable Vue elements; the evidence screenshots
-and cartoons retain their original pixels. The jagged illustration uses an SVG
+Speaker notes retain source page numbers and interpretation limits. The harness benchmark is an editable Vue diagram; evidence screenshots
+and cartoons retain their original pixels. Earlier fuzzing-workflow assets remain
+available locally but are no longer part of the slide sequence. The jagged illustration uses an SVG
 viewport to show only the relevant panel. No context-problem material is included.
 
-- Page 9: `Image116.jpg` (Minesweeper).
 - Pages 24–25: `Image205.png`, `Image215.png`, `Image211.png`, `Image209.png`,
   `Image207.png` (workflow icons), `Image221.png` (OSS-Fuzz baseline).
 - Page 26: `Image228.png` (original benchmark table backing the editable rows).

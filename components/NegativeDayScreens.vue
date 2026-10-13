@@ -347,7 +347,7 @@ function hotspotMark(hotspot: ScreenHotspot) {
 .nd-screen-punchline {
   position: absolute;
   right: 1.8%;
-  bottom: 2.2%;
+  bottom: 7%;
   z-index: 4;
   margin: 0;
   max-width: 46%;

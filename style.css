@@ -15,8 +15,8 @@
 .thank-you-slide {
   box-sizing: border-box;
   padding: 0 !important;
-  background: #000;
-  color: #f5f5f7;
+  background: #fff;
+  color: #1d1d1f;
 }
 
 .section-title-slide .section-title-content h1 {
@@ -533,7 +533,8 @@
 
 .aisle-wall-of-fame-frame {
   position: relative;
-  width: 100%;
+  width: 94%;
+  transform: translateY(-16px);
   aspect-ratio: 2402 / 1242;
 }
 
@@ -584,7 +585,7 @@
 .pareto-reaction { position: absolute; left: 60%; top: 48%; width: 20%; height: auto; border-radius: 7px; z-index: 3; }
 
 /* BSides evidence uses original assets on the existing white canvas. */
-.bsides-tower { position: absolute; inset: 22px 50px; margin: 0; display: flex; align-items: center; justify-content: center; }
+.bsides-tower { position: absolute; inset: 22px 50px 50px; margin: 0; display: flex; align-items: center; justify-content: center; }
 .bsides-tower img { display: block; height: 100%; max-width: 100%; object-fit: contain; }
 .bsides-jagged { position: absolute; top: 50%; left: 50%; width: 360px; height: 420px; transform: translate(-50%, -50%); }
 .bsides-jagged svg { display: block; width: 100%; height: 100%; overflow: hidden; }
@@ -596,11 +597,6 @@
 .harness-plea { margin-top: 12px; width: 410px; font-size: 21px; color: #6e6e73; }
 
 .goal-control-callout { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-
-
-
-
-.goal-control-callout text { font-size: 24px !important; font-weight: 400; }
 
 .eval-setup-title { position: absolute; top: 38px; left: 45px; right: 40px; margin: 0 !important; font-size: 31px !important; font-weight: 400 !important; line-height: 1.15 !important; letter-spacing: -.035em; }
 .eval-setup-story { position: absolute; left: 45px; top: 126px; width: 335px; display: grid; gap: 27px; }
@@ -615,12 +611,15 @@
 .eval-json-card pre { padding: 16px !important; margin: 0 !important; font-size: 12px !important; line-height: 1.6 !important; background: transparent !important; }
 .eval-setup-takeaway { position: absolute; bottom: 30px; left: 45px; right: 38px; margin: 0; font-size: 19px; color: #6e6e73; }
 .openssl-eval-plot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.plot-applause { position: absolute; font-size: 30px; line-height: 1; }
-.plot-applause-deepseek { left: 28%; top: 22%; transform: translateX(-50%); }
-.plot-applause-gpt { left: 92.8%; top: 13%; transform: translateX(-50%); }
 
 .conclusion-takeaways { position: absolute; inset: 66px 65px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
 .conclusion-takeaways .takeaway-group { margin: 0; padding-left: 27px; list-style-type: disc; }
 .conclusion-takeaways li { padding-left: 5px; line-height: 1.35; }
 .conclusion-takeaways .takeaway-main { color: #1d1d1f; font-size: 29px; font-weight: 500; letter-spacing: -.025em; }
 .conclusion-takeaways .takeaway-sub { color: #6e6e73; font-size: 22px; margin: 9px 0 0 58px !important; list-style-type: circle; }
+
+.plot-applause { position: absolute; font-size: 30px; line-height: 1; }
+.plot-applause-deepseek { left: 28%; top: 22%; transform: translateX(-50%); }
+.plot-applause-gpt { left: 92.8%; top: 13%; transform: translateX(-50%); }
+
+.goal-control-callout text { font-size: 24px !important; font-weight: 400; }

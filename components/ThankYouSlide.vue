@@ -9,7 +9,7 @@
 
     <div class="thank-you-visuals">
       <img class="thank-you-qr" src="/qa-dimi.JPG" alt="Dimi Trizna LinkedIn QR">
-      <img class="thank-you-logo" src="/aisle_logo.png" alt="Aisle">
+      <img class="thank-you-logo" src="/aisle_logo.png" alt="AISLE">
     </div>
   </div>
 </template>
@@ -19,18 +19,14 @@
   box-sizing: border-box;
   position: absolute;
   inset: 0;
-  color: #f5f5f7;
+  color: #1d1d1f;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, sans-serif;
 }
 
 .thank-you-bg {
   position: absolute;
   inset: 0;
-  background-color: #000;
-  background-image:
-    radial-gradient(ellipse 52% 42% at 8% 12%, rgb(72 10 16 / 7%), transparent 68%),
-    radial-gradient(ellipse 48% 38% at 92% 8%, rgb(58 8 14 / 6%), transparent 66%),
-    radial-gradient(ellipse 40% 34% at 18% 88%, rgb(48 6 10 / 5%), transparent 64%);
+  background-color: #fff;
 }
 
 .thank-you-copy {
@@ -44,7 +40,7 @@
 
 .thank-you-copy h1 {
   margin: 0;
-  color: #f5f5f7;
+  color: #1d1d1f;
   font-size: 56px;
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -53,7 +49,7 @@
 
 .thank-you-copy p {
   margin: 14px 0 0;
-  color: #c7c7cc;
+  color: #6e6e73;
   font-size: 40px;
   font-weight: 400;
   letter-spacing: -0.035em;
@@ -77,7 +73,7 @@
   width: 268px;
   height: auto;
   border-radius: 22px;
-  box-shadow: 0 24px 56px rgb(0 0 0 / 65%);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 8%);
   object-fit: contain;
 }
 

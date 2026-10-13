@@ -406,7 +406,7 @@ h1 {
 
 .monitor-screen-tool {
   right: 0;
-  bottom: 0;
+  bottom: 22px;
   z-index: 2;
   width: 45%;
 }
