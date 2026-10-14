@@ -120,13 +120,13 @@ sourceSlide: 15
     />
     <span
       class="aisle-wall-of-fame-mark aisle-discovered-count-mark"
-      data-hotspot-name="495 discovered CVEs"
+      data-hotspot-name="499 discovered CVEs"
       v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 10, strokeWidth: 3 }"
     />
     <span
       class="aisle-wall-of-fame-mark aisle-first-month-mark"
       data-hotspot-name="Sep 25 first bar"
-      v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 5, strokeWidth: 3 }"
+      v-mark="{ at: 1, type: 'circle', color: '#ff3b30', padding: 4.5, strokeWidth: 3 }"
     />
   </div>
 </div>
