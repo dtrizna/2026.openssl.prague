@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import cohereLogo from '../img/cohere.jpg'
+</script>
+
 <template>
   <div class="talk-cover-content">
     <h1>500 CVEs Later:<br><span class="talk-cover-subtitle">Lessons from Securing<br>Open Source with AI</span></h1>
@@ -7,6 +11,7 @@
     </div>
     <img class="talk-cover-event-logo" src="/cyberlogs.png" alt="Cyberlogs">
     <img class="talk-cover-aisle-logo" src="/aisle_logo.png" alt="AISLE">
+    <div v-click="1" class="talk-cover-cohere"><img :src="cohereLogo" alt="Cohere"></div>
   </div>
 </template>
 
@@ -20,4 +25,6 @@
 .talk-cover-speaker span:not(.talk-cover-name) { color: #6e6e73; font-size: 20px; }
 .talk-cover-event-logo { position: absolute; bottom: 48px; left: 76px; width: 240px; height: 111px; object-fit: contain; object-position: left bottom; }
 .talk-cover-aisle-logo { position: absolute; bottom: 48px; right: 76px; width: 76px; height: 76px; object-fit: contain; }
+.talk-cover-cohere { position: absolute; bottom: 57px; right: 45px; width: 160px; height: 48px; transform: rotate(30deg); z-index: 2; overflow: hidden; }
+.talk-cover-cohere img { display: block; width: 100%; height: 100%; object-fit: cover; }
 </style>

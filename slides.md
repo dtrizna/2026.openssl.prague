@@ -1,6 +1,7 @@
 ---
 layout: "cover"
 class: "talk-cover-slide"
+clicks: 1
 title: "500 CVEs Later: Lessons from Securing Open Source with AI"
 theme: "default"
 colorSchema: "light"
@@ -376,6 +377,15 @@ clicks: 1
 ---
 
 <WiresharkImpact />
+
+---
+layout: cover
+class: openssl-slide
+title: "Finwake demo"
+clicks: 1
+---
+
+<FinwakeDemo />
 
 ---
 layout: "cover"

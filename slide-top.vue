@@ -24,7 +24,7 @@ const isTitleSlide = computed(() => {
     v-if="!isTitleSlide"
     class="deck-chrome"
   >
-    <a class="deck-event" href="https://openssl-conference.org/" target="_blank" rel="noopener noreferrer" @click.stop>AISLE · OpenSSL Conference · Prague 2026</a>
+    <a class="deck-event" href="https://openssl-conference.org/" target="_blank" rel="noopener noreferrer" @click.stop>AISLE · CyberLogs #1 · Prague 2026</a>
     <div class="deck-slide-number">{{ $page }}</div>
   </div>
 </template>

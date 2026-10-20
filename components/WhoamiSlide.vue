@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import latvianFlag from '../img/flag-lv.png'
+</script>
+
 <template>
   <div class="whoami">
     <h1># whoami</h1>
+    <img class="latvian-flag" :src="latvianFlag" alt="Latvian flag">
 
     <div class="whoami-bio">
       <p>~15 years in infosec</p>
@@ -138,4 +143,5 @@
   object-fit: contain;
   transform: translateX(-50%);
 }
+.latvian-flag { position: absolute; right: 65px; bottom: 67px; width: 105px; height: auto; transform: rotate(-45deg); }
 </style>
