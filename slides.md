@@ -388,6 +388,15 @@ clicks: 1
 <FinwakeDemo />
 
 ---
+layout: cover
+class: openssl-slide
+title: "From validation to exploit development"
+clicks: 1
+---
+
+<div class="diagram-stage"><OpenSSLDiagram scene="exploit-pipeline" /></div>
+
+---
 layout: "cover"
 class: "openssl-slide"
 clicks: 2

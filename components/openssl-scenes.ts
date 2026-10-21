@@ -70,8 +70,33 @@ const afterPatch: Stage = [
   ['No crash result', '_BGl9G0sSbz79wDg5AoFU'],
 ]
 
+const exploitPipeline: Stage = [
+  ['Exploit pipeline candidate vulnerabilities', 'Z-TiVm_8DdmxnKdMbwUUQ'],
+  ['Exploit pipeline upper discovery branch', 'GGm-tFlG4ZexLYqpRwg7j'],
+  ['Exploit pipeline lower discovery branch', 'jnIKe0lDut9-UDQl4gq5L'],
+  ['Exploit pipeline discovery heading', 'DGC9aaZNRjPJPfr2D2lDo'],
+  ['Exploit pipeline candidate boundary', 'c7OY__LSmXMA7LwIBLC6h'],
+  ['Exploit pipeline source code', 'IvCtehTvdlduVVdQIsL2y'],
+  ['Exploit pipeline upper validation branch', 'WIhgLl5XDgcS26zicb6dV'],
+  ['Exploit pipeline lower validation branch', 'XqOw3mvcRhMYHDI4XVW67'],
+  ['Exploit pipeline validation heading', '94DD10vprPuYqkYy5ZtEp'],
+  ['Exploit pipeline security domain expertise', 'ux8nh48JfHuzhnZQQ0eZE'],
+  ['Exploit pipeline ai native capabilities', '7AiC4Xt0yuJAy0-tU2IRw'],
+  ['Exploit pipeline discovery expertise arrow', '4g_3LBHzgkP_evOcMAMfp'],
+  ['Exploit pipeline validation expertise arrow', 'dXsDmVVhEETEJTG5bF_QZ'],
+  ['Exploit pipeline findings with poc', 'el6OnadKKic9edHSfN7Jy'],
+  ['Exploit pipeline validated findings boundary', '8cTgDmFBCy6PO8rY6EJw2'],
+  ['Exploit pipeline lower exploit branch', 'TkvyBfxa5iWeCBWBRkUu5'],
+  ['Exploit pipeline upper exploit branch', 'uzpTMQ-Bpld0St9gVMm_D'],
+  ['Exploit pipeline weaponized exploit boundary', 'U_gF8itUYCQbaSwpYRVUB'],
+  ['Exploit pipeline weaponized exploit label', '7shBRUjWqC9c5HG6Gmqhz'],
+  ['Exploit pipeline exploit development heading', 'eSqtdAzsrRiz2rswCSBaO'],
+  ['Exploit pipeline exploit expertise arrow', 'bgcGRee_z7dSA3WnFc3dC'],
+]
+
 // Index zero is visible on entry. Every subsequent group is one click.
 const scenes = {
+  'exploit-pipeline': [exploitPipeline.slice(0, 15), exploitPipeline.slice(15)],
   discovery: [[...source, ...discovery]],
   'anthropic-response': [[], [], [], [['Anthropic response', 'gtOht48Vn2OTGkdLzj9MI']]],
   pipeline: [
